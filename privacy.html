@@ -26,6 +26,7 @@
 body{margin:0;background:#231A23}
 *,*::before,*::after{box-sizing:border-box}
 a{color:#FFB45C}a:hover{color:#FFD39E}
+@media (max-width:600px){h1,h2,h3{text-wrap:balance}p,li{text-wrap:pretty}.nw{white-space:nowrap}}
 </style>
 </head>
 <body>
@@ -49,13 +50,13 @@ a{color:#FFB45C}a:hover{color:#FFD39E}
 <section style="background: #1A1218; border-top: 1px solid #3A2A33; border-bottom: 1px solid #3A2A33">
 <div style="max-width: 1160px; margin: 0 auto; padding: 88px 32px; display: flex; flex-wrap: wrap; gap: 48px">
 <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<h2 style="margin: 0; font-family: 'Quicksand', 'Trebuchet MS', sans-serif; font-weight: 700; font-size: 38px; line-height: 1.15; color: #F4E7D4">The short version</h2>
+<h2 style="margin: 0; font-family: 'Quicksand', 'Trebuchet MS', sans-serif; font-weight: 700; font-size: min(38px, max(30px, 8.6vw)); line-height: 1.15; color: #F4E7D4">The short version</h2>
 </div>
 <ul style="flex: 1 1 480px; min-width: 0; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 20px">
 <li style="padding-bottom: 20px; border-bottom: 1px solid #3A2A33; font-size: 18px; line-height: 1.6; color: #CDB89E"><strong style="color: #F4E7D4">No ads, no analytics, no accounts.</strong> The only outside service the app talks to is your app store's purchase system, which on Google Play may also send Google its own diagnostics.</li>
 <li style="padding-bottom: 20px; border-bottom: 1px solid #3A2A33; font-size: 18px; line-height: 1.6; color: #CDB89E"><strong style="color: #F4E7D4">What you make stays with your family.</strong> Puppets and stories are never sent to us. They stay on your device, and in its own backup if you've switched backup on.</li>
 <li style="padding-bottom: 20px; border-bottom: 1px solid #3A2A33; font-size: 18px; line-height: 1.6; color: #CDB89E"><strong style="color: #F4E7D4">No camera, photos or microphone.</strong> BeddyPals never asks to use them, or your location or contacts.</li>
-<li style="font-size: 18px; line-height: 1.6; color: #CDB89E"><strong style="color: #F4E7D4">Purchases go through your app store</strong>, behind a grown-up check.</li>
+<li style="font-size: 18px; line-height: 1.6; color: #CDB89E"><strong style="color: #F4E7D4">Purchases go through your app store</strong>, behind a <span class="nw">grown-up</span> check.</li>
 </ul>
 </div>
 </section>
@@ -75,7 +76,7 @@ a{color:#FFB45C}a:hover{color:#FFD39E}
 <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #CDB89E">BeddyPals keeps its data in the app's own private storage on your device:</p>
 <ul style="margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; font-size: 17px; line-height: 1.65; color: #CDB89E">
 <li><strong style="color: #F4E7D4">Settings and what you make:</strong> your preferences (such as display and sleep-timer choices, and where you left off), and the puppets and stories you create.</li>
-<li><strong style="color: #F4E7D4">Purchase record:</strong> what your app store reports you have bought, so the app knows what is unlocked, and when it last checked. On Amazon devices this includes a scrambled version of the ID Amazon gives the app, used only to notice if a different Amazon account signs in. On Google Play and on iPhone and iPad there is no account ID at all.</li>
+<li><strong style="color: #F4E7D4">Purchase record:</strong> what your app store reports you have bought, so the app knows what is unlocked, and when it last checked. On Amazon devices this includes a scrambled version of the ID Amazon gives the app, used only to notice if a different Amazon account signs in. Amazon's purchase software in the app also keeps its own records there, including Amazon's account and receipt IDs. On Google Play and on iPhone and iPad, BeddyPals' record has no account ID at all. On Google Play, Google's billing library keeps its own files there too.</li>
 </ul>
 <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #CDB89E">None of this is sent to us.</p>
 </div>
@@ -85,7 +86,7 @@ a{color:#FFB45C}a:hover{color:#FFD39E}
 </div>
 <div style="padding: 24px 0; border-bottom: 1px solid #3A2A33; display: flex; flex-direction: column; gap: 8px">
 <h3 style="margin: 0; font-family: 'Quicksand', 'Trebuchet MS', sans-serif; font-weight: 700; font-size: 22px; color: #F4E7D4">Backups</h3>
-<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #CDB89E">If you've switched on your device's own backup, it includes BeddyPals' settings and what your family made in the app: puppets, stories and drafts. That way they can come back on a new or reset device, or move with you when you set up a new one. Your purchases come from your app store, not from a backup: your store tells BeddyPals again what you own. On Amazon and Google Play devices, BeddyPals tells the backup to leave out its purchase record. On an iPhone or iPad, the backup includes the app's record of what was unlocked, and the App&nbsp;Store's answer replaces it the next time the app checks.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #CDB89E">If you've switched on your device's own backup, it includes BeddyPals' settings and what your family made in the app: puppets, stories and drafts. That way they can come back on a new or reset device, or move with you when you set up a new one. Your purchases come from your app store, not from a backup: your store tells BeddyPals again what you own. On Amazon and Google Play devices, BeddyPals tells the backup to leave out its purchase record and the store software's own files. On an iPhone or iPad, the backup includes the app's record of what was unlocked, and the App&nbsp;Store's answer replaces it the next time the app checks.</p>
 <ul style="margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; font-size: 17px; line-height: 1.65; color: #CDB89E">
 <li><strong style="color: #F4E7D4">Amazon Fire tablets:</strong> the tablet's own backup feature, where Amazon offers it, which keeps the backup with Amazon under Amazon's privacy notice.</li>
 <li><strong style="color: #F4E7D4">Google Play:</strong> Android's own backup to your Google account, under Google's privacy policy.</li>
@@ -97,11 +98,11 @@ a{color:#FFB45C}a:hover{color:#FFD39E}
 <h3 style="margin: 0; font-family: 'Quicksand', 'Trebuchet MS', sans-serif; font-weight: 700; font-size: 22px; color: #F4E7D4">Permissions and the internet</h3>
 <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #CDB89E">BeddyPals never asks for the camera, photos, microphone, location or contacts, and its own code never connects to the internet, apart from links you tap that open in your browser. Your app store's purchase system does: when you buy something, and when the app checks what is unlocked. Everything else works offline.</p>
 <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #CDB89E">On Google Play, Google's billing library adds the permissions it needs, including internet access, and may send Google its own diagnostics. What it sends, and how Google uses it, is covered by Google's privacy policy; none of it comes to us. These permissions don't show a prompt, and BeddyPals' own code doesn't use them.</p>
-<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #CDB89E">On an iPhone or iPad, the plans screen, which only opens after the grown-up check, has two links that open in Safari: this policy, and Apple's standard license agreement for apps. BeddyPals has no other links, and on Amazon and Google Play devices it has none.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #CDB89E">On an iPhone or iPad, the plans screen, which only opens after the <span class="nw">grown-up</span> check, has two links that open in Safari: this policy, and Apple's standard license agreement for apps. BeddyPals has no other links, and on Amazon and Google Play devices it has none.</p>
 </div>
 <div style="padding: 24px 0; border-bottom: 1px solid #3A2A33; display: flex; flex-direction: column; gap: 8px">
 <h3 style="margin: 0; font-family: 'Quicksand', 'Trebuchet MS', sans-serif; font-weight: 700; font-size: 22px; color: #F4E7D4">Purchases</h3>
-<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #CDB89E">Premium is bought through your app store, and only after a grown-up passes a short check designed for adults. Each store takes the payment and handles it under its own terms and privacy policy:</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #CDB89E">Premium is bought through your app store, and only after a <span class="nw">grown-up</span> passes a short check designed for adults. Each store takes the payment and handles it under its own terms and privacy policy:</p>
 <ul style="margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; font-size: 17px; line-height: 1.65; color: #CDB89E">
 <li><strong style="color: #F4E7D4">Amazon Appstore:</strong> BeddyPals uses Amazon's Appstore SDK, which works through the Amazon Appstore app on your device. See <a href="https://www.amazon.com/privacy">Amazon's privacy notice</a> for what Amazon collects.</li>
 <li><strong style="color: #F4E7D4">Google Play:</strong> BeddyPals uses Google Play's billing library, which may also send Google its own diagnostics, as described above. See <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</li>
@@ -111,7 +112,7 @@ a{color:#FFB45C}a:hover{color:#FFD39E}
 </div>
 <div style="padding: 24px 0; border-bottom: 1px solid #3A2A33; display: flex; flex-direction: column; gap: 8px">
 <h3 style="margin: 0; font-family: 'Quicksand', 'Trebuchet MS', sans-serif; font-weight: 700; font-size: 22px; color: #F4E7D4">Children's privacy</h3>
-<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #CDB89E">BeddyPals is made for a grown-up to use with a young child. We don't collect personal information from children, or from anyone, through BeddyPals. Nothing a child types, makes or taps in the app is sent to us. There are no ads, no analytics and no accounts, and the app has no crash reporting of its own. Every purchase sits behind a grown-up check. On Google Play, Google's billing library may send Google its own diagnostics, as described above. Those are about billing, not about what a child does in the app.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #CDB89E">BeddyPals is made for a <span class="nw">grown-up</span> to use with a young child. We don't collect personal information from children, or from anyone, through BeddyPals. Nothing a child types, makes or taps in the app is sent to us. There are no ads, no analytics and no accounts, and the app has no crash reporting of its own. Every purchase sits behind a <span class="nw">grown-up</span> check. On Google Play, Google's billing library may send Google its own diagnostics, as described above. Those are about billing, not about what a child does in the app.</p>
 <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #CDB89E">Because the app sends us nothing, we hold no information about your child from the app. If you've emailed us, that email is the only thing we have, and we'll delete it on request. Everything BeddyPals keeps stays on your device, and in its own backup if you've switched that on. You can remove it from the device at any time by uninstalling the app, and from a backup through your device's backup settings. If you have questions about your child's privacy, email us.</p>
 </div>
 <div style="padding: 24px 0; border-bottom: 1px solid #3A2A33; display: flex; flex-direction: column; gap: 8px">
