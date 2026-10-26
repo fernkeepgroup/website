@@ -31,3 +31,5 @@ Disallow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://fernkeepgroup.com/sitemap.xml
